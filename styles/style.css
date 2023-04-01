@@ -1,0 +1,150 @@
+
+/* body font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F1FF;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: white;
+    width: 650px;
+    padding: 25px;
+    margin-top: 20px;
+    height: auto;
+}
+/* top player */
+.top-player{
+    margin-bottom: 30px;
+}
+.section-class{
+    color: #562EFF;
+    font-size: 15px;
+    margin-top: 5px;
+}
+hr{
+    border: 1px 1px 1px blue;
+    margin-bottom: 26px;
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   grid-row-gap: 5px;
+
+}
+.player{
+    display: flex;
+    align-items: center;
+    font-size: small;
+}
+.player img{
+    height: 45px;
+    width: 45px;
+}
+.player-name{
+    margin-left: 16px;
+    font-size: 1em;
+}
+
+/* top blog styles */
+.blog{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 20px;
+}
+.blogs{
+    display: flex;
+}
+.blogs .thumbnail img{
+    width: 100px;
+    height:100px;
+}
+.blog-info{
+margin-left: 16px;
+}
+.blog-title{
+    font-size: 10px;
+}
+.blog-author{
+    color: #9F9F9F;
+    font-size:13px ;
+}
+.blog-author a{
+    text-decoration: none;
+    color: #562EFF;
+    font-size: 13px;
+}
+
+/*--------------------- course---------------- */
+ .courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-column-gap: 15px; */
+    justify-content: space-evenly;
+ }
+.rating{
+    display:flex;
+    align-items: center;
+    /* grid-template-columns: repeat(3,1fr); */
+    gap: 10px;
+    
+}
+.course-info .course-banner img {
+    width:150px;
+    height: 80px;
+}
+.detail{
+    font-size: 10px;
+}
+.author-info{
+    color: #ED6B4F;
+    font-size: 10px;
+}
+.fa-star.filled{
+    color: #FFC014;
+    font-size: 12px;
+}
+.empty{
+    color: #AEAEAE;
+    font-size: 12px;
+}
+.duration{
+    font-size: 12px;
+    height: 14px;  
+}
+/*-----------------------------------------------------------
+                             media queries---
+------------------------------------------- -----------------*/
+
+/* -----------------------------------------------------------
+  --------  mobile device--------------
+ ----------------------------------------*/
+ @media only screen and (max-width:550px) {
+    .container{
+        width: 100%;
+    }
+    .players{
+          grid-template-columns: repeat(1,1fr);
+          
+    }
+    .blog, .blogs,.courses {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .player{
+        flex-direction: column;
+    }
+   .section-class{
+    text-align: center;
+   }
+  .blogs{
+    width: 100%;
+   }
+}
